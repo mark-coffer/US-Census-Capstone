@@ -75,7 +75,6 @@ object readCsvToParque{
     val parqDF = spark.read.parquet("./src/main/scala/output/parquet/2020/parquet_1_2020")
     parqDF.printSchema()
     parqDF.show()
-
   }
 }
 
