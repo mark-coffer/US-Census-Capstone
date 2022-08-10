@@ -1,0 +1,192 @@
+2022.08.10 17:15:39 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\Home\Desktop\reskillng\census_project\.metals\lsp.trace.json or C:\Users\Home\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.08.10 17:16:11 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\Home\Desktop\reskillng\census_project\.metals\lsp.trace.json or C:\Users\Home\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.08.10 17:16:13 INFO  logging to file C:\Users\Home\Desktop\reskillng\census_project\.metals\metals.log
+2022.08.10 17:16:13 INFO  Started: Metals version 0.11.8 in workspace 'C:\Users\Home\Desktop\reskillng\census_project' for client Visual Studio Code 1.70.1.
+2022.08.10 17:16:13 WARN  Can't instantiate JavaInteractiveSemanticdb (version: JdkVersion(8), jdkHome: C:\Program Files\Java\jre1.8.0_333, javac exists: false)
+2022.08.10 17:16:15 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.10 17:16:16 INFO  time: initialize in 2.63s
+2022.08.10 17:16:17 WARN  Build server is not auto-connectable.
+2022.08.10 17:16:17 WARN  no build target for: C:\Users\Home\Desktop\reskillng\census_project\build.sbt
+2022.08.10 17:16:20 INFO  running 'C:\Program Files\Java\jre1.8.0_333\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\Home\AppData\Local\Temp\metals5364198252775436866\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.08.10 17:16:25 INFO  no build target found for C:\Users\Home\Desktop\reskillng\census_project\build.sbt. Using presentation compiler with project's scala-library version: 3.1.3
+2022.08.10 17:16:28 INFO  [info] welcome to sbt 1.6.2 (Oracle Corporation Java 1.8.0_333)
+2022.08.10 17:16:31 INFO  time: code lens generation in 12s
+2022.08.10 17:16:31 INFO  time: code lens generation in 9.69s
+2022.08.10 17:16:36 INFO  [info] loading settings for project census_project-build-build from metals.sbt ...
+2022.08.10 17:16:38 INFO  [info] loading project definition from C:\Users\Home\Desktop\reskillng\census_project\project\project
+2022.08.10 17:16:40 WARN  no build target for: C:\Users\Home\Desktop\reskillng\census_project\src\main\scala\readCsvToParque.scala
+2022.08.10 17:16:48 INFO  [info] loading settings for project census_project-build from metals.sbt ...
+2022.08.10 17:16:48 INFO  [info] loading project definition from C:\Users\Home\Desktop\reskillng\census_project\project
+2022.08.10 17:16:53 WARN  no build target for: C:\Users\Home\Desktop\reskillng\census_project\src\main\scala\readCsvToParque.scala
+2022.08.10 17:16:55 INFO  [success] Generated .bloop\census_project-build.json
+2022.08.10 17:16:55 INFO  [success] Total time: 7 s, completed Aug 10, 2022 5:16:55 PM
+2022.08.10 17:16:59 WARN  no build target for: C:\Users\Home\Desktop\reskillng\census_project\src\main\scala\readCsvToParque.scala
+2022.08.10 17:17:01 INFO  [info] loading settings for project census_project from build.sbt ...
+2022.08.10 17:17:01 INFO  [info] set current project to project2 (in build file:/C:/Users/Home/Desktop/reskillng/census_project/)
+Aug 10, 2022 5:17:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 29
+2022.08.10 17:17:03 WARN  no build target for: C:\Users\Home\Desktop\reskillng\census_project\src\main\scala\readCsvToParque.scala
+2022.08.10 17:17:19 INFO  [success] Generated .bloop\census_project.json
+2022.08.10 17:17:19 INFO  [success] Generated .bloop\census_project-test.json
+2022.08.10 17:17:19 INFO  [success] Total time: 17 s, completed Aug 10, 2022 5:17:19 PM
+2022.08.10 17:17:19 INFO  time: ran 'sbt bloopInstall' in 59s
+2022.08.10 17:17:19 INFO  Attempting to connect to the build server...
+2022.08.10 17:17:19 INFO  Bloop uses C:\Program Files\Java\jre1.8.0_333 defined at C:\Users\Home\.bloop\bloop.json
+2022.08.10 17:17:19 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Home\Desktop\reskillng\census_project\.metals\bsp.trace.json or C:\Users\Home\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.08.10 17:17:29 INFO  Attempting to connect to the build server...
+2022.08.10 17:17:29 INFO  Bloop uses C:\Program Files\Java\jre1.8.0_333 defined at C:\Users\Home\.bloop\bloop.json
+2022.08.10 17:17:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Home\Desktop\reskillng\census_project\project\.metals\bsp.trace.json or C:\Users\Home\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.08.10 17:17:33 INFO  time: Connected to build server in 14s
+2022.08.10 17:17:33 INFO  Connected to Build server: Bloop v1.5.2
+2022.08.10 17:17:34 INFO  time: Imported build in 0.16s
+2022.08.10 17:17:52 WARN  Could not find java sources in C:\Program Files\Java\src.zip, C:\Program Files\Java\lib\src.zip, C:\Program Files\Java\jre1.8.0_333\src.zip, C:\Program Files\Java\jre1.8.0_333\lib\src.zip. Java symbols will not be available.
+2022.08.10 17:18:00 WARN  Could not find java sources in C:\Program Files\Java\src.zip, C:\Program Files\Java\lib\src.zip, C:\Program Files\Java\jre1.8.0_333\src.zip, C:\Program Files\Java\jre1.8.0_333\lib\src.zip. Java symbols will not be available.
+2022.08.10 17:18:00 INFO  time: indexed workspace in 25s
+2022.08.10 17:18:00 INFO  compiling census_project (2 scala sources)
+2022.08.10 17:18:07 INFO  time: compiled census_project in 6.86s
+2022.08.10 17:18:09 INFO  compiling census_project (1 scala source)
+2022.08.10 17:18:15 INFO  time: compiled census_project in 5.26s
+2022.08.10 17:18:39 INFO  compiling census_project (1 scala source)
+2022.08.10 17:18:42 INFO  time: compiled census_project in 2.94s
+Aug 10, 2022 5:48:48 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.08.10 17:55:51 INFO  compiling census_project (1 scala source)
+2022.08.10 17:55:52 INFO  time: compiled census_project in 1.42s
+2022.08.10 17:55:54 INFO  compiling census_project (1 scala source)
+2022.08.10 17:55:58 INFO  time: compiled census_project in 3.81s
+2022.08.10 17:58:47 INFO  shutting down Metals
+2022.08.10 17:58:47 INFO  Shut down connection with build server.
+2022.08.10 17:58:47 INFO  Shut down connection with build server.
+2022.08.10 18:00:33 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\Home\Desktop\reskillng\census_project\.metals\lsp.trace.json or C:\Users\Home\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.08.10 18:00:36 INFO  logging to file C:\Users\Home\Desktop\reskillng\census_project\.metals\metals.log
+2022.08.10 18:00:36 INFO  Started: Metals version 0.11.8 in workspace 'C:\Users\Home\Desktop\reskillng\census_project' for client Visual Studio Code 1.70.1.
+2022.08.10 18:00:36 WARN  Can't instantiate JavaInteractiveSemanticdb (version: JdkVersion(8), jdkHome: C:\Program Files\Java\jre1.8.0_333, javac exists: false)
+2022.08.10 18:00:37 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.10 18:00:38 INFO  time: initialize in 2.38s
+2022.08.10 18:00:39 INFO  Attempting to connect to the build server...
+2022.08.10 18:00:39 INFO  Bloop uses C:\Program Files\Java\jre1.8.0_333 defined at C:\Users\Home\.bloop\bloop.json
+2022.08.10 18:00:39 INFO  skipping build import with status 'Installed'
+2022.08.10 18:00:41 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Home\Desktop\reskillng\census_project\.metals\bsp.trace.json or C:\Users\Home\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.08.10 18:00:41 INFO  Attempting to connect to the build server...
+2022.08.10 18:00:41 INFO  Bloop uses C:\Program Files\Java\jre1.8.0_333 defined at C:\Users\Home\.bloop\bloop.json
+2022.08.10 18:00:41 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Home\Desktop\reskillng\census_project\project\.metals\bsp.trace.json or C:\Users\Home\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.08.10 18:00:41 INFO  time: Connected to build server in 2.2s
+2022.08.10 18:00:41 INFO  Connected to Build server: Bloop v1.5.2
+2022.08.10 18:00:46 INFO  no build target found for C:\Users\Home\Desktop\reskillng\census_project\src\main\scala\readCsvToParque.scala. Using presentation compiler with project's scala-library version: 3.1.3
+2022.08.10 18:00:46 INFO  time: code lens generation in 6.78s
+2022.08.10 18:00:46 INFO  time: Imported build in 0.23s
+2022.08.10 18:00:52 WARN  Could not find java sources in C:\Program Files\Java\src.zip, C:\Program Files\Java\lib\src.zip, C:\Program Files\Java\jre1.8.0_333\src.zip, C:\Program Files\Java\jre1.8.0_333\lib\src.zip. Java symbols will not be available.
+2022.08.10 18:00:55 WARN  Could not find java sources in C:\Program Files\Java\src.zip, C:\Program Files\Java\lib\src.zip, C:\Program Files\Java\jre1.8.0_333\src.zip, C:\Program Files\Java\jre1.8.0_333\lib\src.zip. Java symbols will not be available.
+2022.08.10 18:00:55 INFO  time: indexed workspace in 9s
+Aug 10, 2022 6:00:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "build/taskFinish",
+  "params": {
+    "taskId": {
+      "id": "1"
+    },
+    "eventTime": 1660168856129,
+    "message": "Compiled \u0027census_project\u0027",
+    "status": 1,
+    "dataKind": "compile-report",
+    "data": {
+      "target": {
+        "uri": "file:/C:/Users/Home/Desktop/reskillng/census_project/?id\u003dcensus_project"
+      },
+      "errors": 0,
+      "warnings": 0,
+      "isNoOp": true,
+      "isLastCycle": true,
+      "clientDir": "file:///C:/Users/Home/Desktop/reskillng/census_project/.bloop/census_project/bloop-bsp-clients-classes/classes-Metals-ZroHEQQuTimyYbdZbMM8_w\u003d\u003d/",
+      "analysisOut": "file:///C:/Users/Home/Desktop/reskillng/census_project/.bloop/census_project/census_project-analysis.bin"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.NullPointerException
+	at scala.meta.internal.metals.Compilers.$anonfun$didCompile$3(Compilers.scala:247)
+	at scala.meta.internal.metals.Compilers.$anonfun$didCompile$3$adapted(Compilers.scala:245)
+	at scala.Option.foreach(Option.scala:437)
+	at scala.meta.internal.metals.Compilers.$anonfun$didCompile$2(Compilers.scala:245)
+	at scala.meta.internal.metals.Compilers.$anonfun$didCompile$2$adapted(Compilers.scala:244)
+	at scala.collection.mutable.HashSet$Node.foreach(HashSet.scala:435)
+	at scala.collection.mutable.HashSet.foreach(HashSet.scala:361)
+	at scala.meta.internal.metals.Compilers.didCompile(Compilers.scala:244)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$14(MetalsLanguageServer.scala:453)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$14$adapted(MetalsLanguageServer.scala:451)
+	at scala.meta.internal.metals.clients.language.ForwardingMetalsBuildClient.$anonfun$buildTaskFinish$2(ForwardingMetalsBuildClient.scala:160)
+	at scala.Option.foreach(Option.scala:437)
+	at scala.meta.internal.metals.clients.language.ForwardingMetalsBuildClient.$anonfun$buildTaskFinish$1(ForwardingMetalsBuildClient.scala:157)
+	at scala.meta.internal.metals.clients.language.ForwardingMetalsBuildClient.$anonfun$buildTaskFinish$1$adapted(ForwardingMetalsBuildClient.scala:156)
+	at scala.Option.foreach(Option.scala:437)
+	at scala.meta.internal.metals.clients.language.ForwardingMetalsBuildClient.buildTaskFinish(ForwardingMetalsBuildClient.scala:156)
+	... 16 more
+
+Aug 10, 2022 6:05:40 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Aug 10, 2022 6:05:41 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Aug 10, 2022 6:14:26 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.ArrayIndexOutOfBoundsException: 7145
+java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: 7145
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 7145
+	at scala.meta.internal.parsing.FoldingRangeExtractor$Foldable$.isScala3BlockWithoutOptionalBraces(FoldingRangeExtractor.scala:248)
+	at scala.meta.internal.parsing.FoldingRangeExtractor$Foldable$.unapply(FoldingRangeExtractor.scala:199)
+	at scala.meta.internal.parsing.FoldingRangeExtractor.extractFrom(FoldingRangeExtractor.scala:36)
+	at scala.meta.internal.parsing.FoldingRangeExtractor.$anonfun$extractFrom$2(FoldingRangeExtractor.scala:56)
+	at scala.meta.internal.parsing.FoldingRangeExtractor.$anonfun$extractFrom$2$adapted(FoldingRangeExtractor.scala:51)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.parsing.FoldingRangeExtractor.extractFrom(FoldingRangeExtractor.scala:51)
+	at scala.meta.internal.parsing.FoldingRangeExtractor.$anonfun$extractFrom$2(FoldingRangeExtractor.scala:56)
+	at scala.meta.internal.parsing.FoldingRangeExtractor.$anonfun$extractFrom$2$adapted(FoldingRangeExtractor.scala:51)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.parsing.FoldingRangeExtractor.extractFrom(FoldingRangeExtractor.scala:51)
+	at scala.meta.internal.parsing.FoldingRangeExtractor.$anonfun$extractFrom$2(FoldingRangeExtractor.scala:56)
+	at scala.meta.internal.parsing.FoldingRangeExtractor.$anonfun$extractFrom$2$adapted(FoldingRangeExtractor.scala:51)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.parsing.FoldingRangeExtractor.extractFrom(FoldingRangeExtractor.scala:51)
+	at scala.meta.internal.parsing.FoldingRangeExtractor.extract(FoldingRangeExtractor.scala:29)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedForScala$3(FoldingRangeProvider.scala:40)
+	at scala.Option.map(Option.scala:242)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedForScala$2(FoldingRangeProvider.scala:33)
+	at scala.Option$WithFilter.flatMap(Option.scala:283)
+	at scala.meta.internal.parsing.FoldingRangeProvider.getRangedForScala(FoldingRangeProvider.scala:31)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$foldingRange$2(MetalsLanguageServer.scala:1705)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2022.08.10 18:27:20 INFO  shutting down Metals
+2022.08.10 18:27:20 INFO  Shut down connection with build server.
+2022.08.10 18:27:20 INFO  Shut down connection with build server.

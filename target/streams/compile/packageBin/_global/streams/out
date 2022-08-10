@@ -1,0 +1,31 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging C:\Users\Home\Desktop\reskillng\census_project\target\scala-2.11\project2_2.11-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Home\Desktop\reskillng\census_project\target\scala-2.11\classes\main[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main\project$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Home\Desktop\reskillng\census_project\target\scala-2.11\classes\main\project$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main\project$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Home\Desktop\reskillng\census_project\target\scala-2.11\classes\main\project$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main\project$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Home\Desktop\reskillng\census_project\target\scala-2.11\classes\main\project$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main\project$$anonfun$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Home\Desktop\reskillng\census_project\target\scala-2.11\classes\main\project$$anonfun$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main\project$$anonfun$5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Home\Desktop\reskillng\census_project\target\scala-2.11\classes\main\project$$anonfun$5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main\project$$anonfun$6.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Home\Desktop\reskillng\census_project\target\scala-2.11\classes\main\project$$anonfun$6.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main\project$$anonfun$7.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Home\Desktop\reskillng\census_project\target\scala-2.11\classes\main\project$$anonfun$7.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main\project$$anonfun$downloadFiles$1$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Home\Desktop\reskillng\census_project\target\scala-2.11\classes\main\project$$anonfun$downloadFiles$1$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main\project$$anonfun$unZipAll$1$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Home\Desktop\reskillng\census_project\target\scala-2.11\classes\main\project$$anonfun$unZipAll$1$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main\project$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Home\Desktop\reskillng\census_project\target\scala-2.11\classes\main\project$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main\project.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Home\Desktop\reskillng\census_project\target\scala-2.11\classes\main\project.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	readCsvToParque$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Home\Desktop\reskillng\census_project\target\scala-2.11\classes\readCsvToParque$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	readCsvToParque.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Home\Desktop\reskillng\census_project\target\scala-2.11\classes\readCsvToParque.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
