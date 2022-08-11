@@ -13,5 +13,7 @@ This is a team project to showcase our knowledge and understanding acquired duri
 - Create input and output folders for the zip files obtained from urls
 - Create functions for getting links, downloading links that work with path your have specified/created
 - Unzip Census pl.files from the destination specified in your path
-- Create a function to convert pl. files from census to csv files
+- Create a function to convert .pl files from census to csv files
+- After you convert .p1 files to csv files convert the csv files into parquet files
 - Make sure before you compile code/run that you have two folders added to src/main/scala/(package_name) called output and csv
+- Lastly deploy the zip parquet files into the S3 bucket through spark scala application
