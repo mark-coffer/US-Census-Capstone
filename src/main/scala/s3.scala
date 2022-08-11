@@ -13,13 +13,7 @@ object s3 {
         
         val sc = spark.sparkContext
 
-        val accessKey = "AKIA4OK5FKIYV3DQPT7K"
-        val secretAccessKey = "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"
-        val bucket = "revature-ajay-big-data-1452"
-
-//         bucket name = revature-ajay-big-data-1452
-// access key = AKIA4OK5FKIYV3DQPT7K
-// secret key = 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
+     
 
         // spark.sparkContext.hadoopConfiguration.set("fs.s3n.awsAccessKeyId", accessKey)
         // spark.sparkContext.hadoopConfiguration.set("fs.s3n.awsSecretAccessKey", secretAccessKey)
