@@ -1,0 +1,4 @@
+[debug] [censusdata-test] Classpath dependencies List()
+[debug] [censusdata-test] Dependencies from configurations List(censusdata)
+[debug] Bloop wrote the configuration of project 'censusdata-test' to 'C:\Users\Khoa\Desktop\CensusData\.bloop\censusdata-test.json'
+[success] Generated .bloop\censusdata-test.json
