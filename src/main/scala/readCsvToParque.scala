@@ -19,6 +19,7 @@ object readCsvToParque{
     val sc = spark.sparkContext
     import spark.implicits._
 
+
     //2020 YEAR READ ALL FILES AND PUT IT IN ONE RDD
   //   val censusDF_1_2020 = spark.read
   //     .options(Map("delimiter" -> "|"))

@@ -17,6 +17,7 @@ import org.apache.spark.sql.SparkSession
 
 
 
+
 object project{
     def main(args:Array[String]):Unit ={
 
@@ -45,7 +46,6 @@ object project{
         //OUTPUT AND INPUT FOLDER FOR 2000
         val zipsFolder2000 = "./src/main/scala/output/zips/zips_2000"
         val perlFolder2000: String = "./src/main/scala/output/csv/csv_2000";
-
 
         //FUNCTION THAT CONNECT TO EACH LINK AND CREATE A LIST OF LINKS TO ZIP FILES
         def getLinks(url: String, zipNum: Integer):List[String] = {

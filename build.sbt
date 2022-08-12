@@ -6,5 +6,6 @@ libraryDependencies += "org.apache.spark" %% "spark-core" % "2.3.2"
 libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.3.2"
 libraryDependencies += "org.apache.spark" %% "spark-hive" % "2.3.2"
 libraryDependencies ++= Seq(
-  "org.jsoup" % "jsoup" % "1.8.3"
+  "org.jsoup" % "jsoup" % "1.8.3",
+  "org.apache.hadoop" % "hadoop-aws" % "2.7.6"
 )
