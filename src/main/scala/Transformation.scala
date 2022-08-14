@@ -1,10 +1,17 @@
 
+//import com.amazonaws.auth.BasicAWSCredentials
+//import com.amazonaws.services.s3.{AmazonS3, AmazonS3Client, AmazonS3ClientBuilder}
+//import com.amazonaws.regions.Regions
+//import com.amazonaws.services.s3.model.{GetObjectRequest, ObjectMetadata, PutObjectRequest}
 
+import scala.collection.immutable._
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql._
 import org.apache.spark.sql.expressions.Window
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.{StringType, StructField, StructType}
+import org.apache.spark.storage.StorageLevel
+import java.io.File
 
 object Transformation {
 
@@ -13,11 +20,14 @@ object Transformation {
     .getOrCreate()
 
   val sc = spark.sparkContext
-  val bucketName = "revature-ajay-big-data-1452"
-  val accessKey = "AKIA4OK5FKIYV3DQPT7K"
-  val secretKey = "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"
+  spark.conf.set("spark.sql.broadcastTimeout", 36000)
 
-  val statesList =List("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS",
+  val bucketName = ""
+  val bucketNameAWSJDK = ""
+  val accessKey = ""
+  val secretKey = ""
+
+  val statesList = List("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS",
     "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK",
     "OR", "PA", "PR", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY")
 
@@ -36,57 +46,48 @@ object Transformation {
   import spark.implicits._
 
   def main(args:Array[String]): Unit = {
-
-
-    downloadParquet()
+    //downloadParquet()
+    spark.close()
   }
 
   def downloadParquet(): Unit = {
-    //download 6 files from S3, excluding geo files
-    val rawData1 = spark.read.option("delimiter", ",").parquet("s3a://revature-ajay-big-data-1452/census/2000/census_2000_1/people.parquet")
-//    val rawData2 = spark.read.option("delimiter", "|").parquet("")
-//    val rawData3 = spark.read.option("delimiter", "|").parquet("")
+    val rawData1 = spark.read.option("delimiter", ",").parquet(s"s3a://${bucketName}/census/2010/census_2010_1/")
+    val rawData2 = spark.read.option("delimiter", ",").parquet(s"s3a://${bucketName}/census/2010/census_2010_2/")
+    rawData1.cache()
+    rawData2.cache()
+//    rawData1.persist(StorageLevel.MEMORY_AND_DISK_SER)
+//    rawData2.persist(StorageLevel.MEMORY_AND_DISK_SER)
 
-    rawData1.printSchema()
 
-    // another way to read DF with hadoopConfiguration.
-    //      val df2 = spark.sparkContext.textFile(s"s3a://${bucketName}/testFileForS3.csv")
-    //      println(df2.name)
-    //      println("##Get data Using collect")
-    //      df2.collect().foreach(f=>{
-    //        println(f)
-    //      })
+    println("total population 01 data is ")
+    val newOptimizedDF1 = modifyDFcolumnsForFile01(rawData1)
 
-    //val newOptimizedDF = modifyDFcolumnsForFile01(rawData1)
-    //uploadOptimizedData(newOptimizedDF)
-  }
+    println("hispanic population 01 data is ")
+    val newOptimizedDF2 = modifyDFcolumnsForFile02(rawData2)
 
-  def joinMultipleDFs(df: DataFrame*): Unit = {
+    val finalOptimizedDF = newOptimizedDF1.join(newOptimizedDF2, newOptimizedDF1("_c1") === newOptimizedDF2("_c1"), "inner").drop(newOptimizedDF2("_c1"))
+      .select("_c1", "_c5", "_c6", "_c7", "_c8", "_c9", "_c10", "_c11", "_c12", "Region").orderBy(newOptimizedDF1("_c1").asc)
 
-//    val df = df
-//    val df2 = df
+    val dfToUpload = finalOptimizedDF.coalesce(1)
 
-    //make this to loop through and add dataframe to array of dataframes?
-    //val joinedDF = modifyDFcolumns(df).union(modifyDFcolumns(df2)).toDF()
-
-    //joinedDF.coalesce(1).createOrReplaceTempView("joinedDF")
-    //val totalPopDF01 = spark.sql("select _c1, max(_c5), max(_c6), max(_c7), max(_c8), max(_c9), max(_c10), max(_c11), max(_c12) joinedDF where _c1 == 'OH' or _c1 == 'AL' group by _c1")
-    //uploadOptimizedData(joinedDF)
+//    uploadOptimizedData(dfToUpload)
+//    createLocalFile(dfToUpload)
   }
 
   def modifyDFcolumnsForFile01(df: DataFrame): DataFrame = {
+
     val cast_df = df.select(df.columns.map {
       case column@"_c0"=>col(column).cast("String").as(column)
       case column@"_c1"=>col(column).cast("String").as(column)
       case column => col(column).cast("Integer").as(column)
     }: _*)
 
-    val cleaned_DF = cast_df.drop("_c0", "_c2", "_c3", "_c4")
-    cleaned_DF.createOrReplaceTempView("cleanedDF")
-    val totalPopDF01 = spark.sql("select _c1, max(_c5), max(_c6), max(_c7), max(_c8), max(_c9), max(_c10), max(_c11), max(_c12) from cleanedDF where _cl1 in () group by _c1")
+    val cleaned_DF1 = cast_df.drop("_c0", "_c2", "_c3", "_c4", "_c6")
+    cleaned_DF1.createOrReplaceTempView("cleanedDF1")
+    val totalPopDF01 = spark.sql(s"select _c1, max(_c5) as _c5, max(_c7) as _c7, max(_c8) as _c8, max(_c9) as _c9, max(_c10) as _c10, max(_c11) as _c11, max(_c12) as _c12 from cleanedDF1 group by _c1 order by _c1 asc")
+
     val mapColumns = typedLit(regionsList)
     val dfFinal = totalPopDF01.withColumn("Region", coalesce(mapColumns($"_c1"), lit("")))
-
 
     dfFinal
   }
@@ -98,25 +99,31 @@ object Transformation {
       case column => col(column).cast("Integer").as(column)
     }: _*)
 
-    val cleaned_DF = cast_df.drop("_c0", "_c2", "_c3", "_c4")
-    cleaned_DF.createOrReplaceTempView("cleanedDF")
-    val totalPopDF01 = spark.sql("select _c1, max(_c6) joinedDF where _cl1 in () group by _c1")
-    val mapColumns = typedLit(regionsList)
-    val dfFinal = cleaned_DF.withColumn("Region", coalesce(mapColumns($"_c1"), lit("")))
+    val cleaned_DF2 = cast_df.drop("_c0", "_c2", "_c3", "_c4")
+    cleaned_DF2.createOrReplaceTempView("cleanedDF2")
+    val totalPopDF01 = spark.sql("select _c1, max(_c6) as _c6 from cleanedDF2 group by _c1")
 
+    totalPopDF01
+  }
 
-    dfFinal
+  def createLocalFile(df1: DataFrame): Unit = {
+    val df2 = df1.coalesce(1)
+//    df2.write.mode("overwrite").parquet("resources/totalPop2000")
+//    df2.write.mode("overwrite").parquet("resources/totalPop2010")
+//    df2.write.mode("overwrite").parquet("resources/totalPop2020")
   }
 
   def uploadOptimizedData(df: DataFrame): Unit = {
-    //df.write.mode("append").csv(s"s3a://${bucketName}/trendsDF/TrendDF.parquet")
-    //df.coalesce(1).write.mode("append").csv(s"s3a://${bucketName}/rawOptimized/totalPop01_2000.parquet")
-//    df.coalesce(1).write.mode("append").csv(s"s3a://${bucketName}/rawOptimized/totalPop01_2010.parquet")
-//    df.coalesce(1).write.mode("append").csv(s"s3a://${bucketName}/rawOptimized/totalPop01_2020.parquet")
-//
-//    df.coalesce(1).write.mode("append").csv(s"s3a://${bucketName}/rawOptimized/totalPop02_2000.parquet")
-//    df.coalesce(1).write.mode("append").csv(s"s3a://${bucketName}/rawOptimized/totalPop02_2010.parquet")
-//    df.coalesce(1).write.mode("append").csv(s"s3a://${bucketName}/rawOptimized/totalPop02_2020.parquet")
+//    df.coalesce(1).write.parquet(s"s3a://${bucketName}/optimized/2000/total_pop_2000_01")
+//        df.write.parquet(s"s3a://${bucketName}/optimized/2000/total_pop_2000")
+//    df.write.mode("overwrite").format("parquet").save(s"s3a://${bucketName}/optimized/2000/total_pop_2000")
   }
 
+  def uploadFileThroughAWSJDK(): Unit = {
+//      val fileToUpload = new File("resources/totalPop2000_1/total_pop_2000.parquet")
+//      val clientRegion = Regions.US_EAST_1
+//      val s3Client = AmazonS3ClientBuilder.standard.withRegion(clientRegion).build
+////    Upload a text string as a new object.
+//      s3Client.putObject(bucketNameAWSJDK, "total_pop_2000_01", fileToUpload)
+  }
 }
