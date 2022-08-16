@@ -1,4 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Khoa\Desktop\CensusData\src\main\scala\SQLquery.scala:63:10: not found: value q8a[0m
-[0m[[0m[31merror[0m] [0m[0m         q8a.show()[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Khoa\Desktop\CensusData\src\main\scala\SQLquery.scala:63:10: not found: value q8b[0m
+[0m[[0m[31merror[0m] [0m[0m         q8b.show()[0m
 [0m[[0m[31merror[0m] [0m[0m         ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Khoa\Desktop\CensusData\src\main\scala\SQLquery.scala:65:11: not found: value q8b[0m
+[0m[[0m[31merror[0m] [0m[0m          q8b.write.option("header", "true").mode("overwrite").csv("input/q8b/")[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

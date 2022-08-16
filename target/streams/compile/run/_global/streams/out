@@ -1,62 +1,19 @@
-[0m[[0m[31merror[0m] [0m[0morg.apache.spark.sql.AnalysisException: cannot resolve '`s1.stateID`' given input columns: [s1.State, s1.Region, s2.OtherRace, s1.White, s1.NativeHawaiian_PacificIslander, s2.Hispanic_Latino, s1.Indian, s1.OtherRace, s1.TotalPop, s2.State, s2.NativeHawaiian_PacificIslander, s2.Asian, s1.African, s2.Region, s2.White, s1.Hispanic_Latino, s2.African, s2.TotalPop, s2.Indian, s1.Asian]; line 1 pos 166;[0m
-[0m[[0m[31merror[0m] [0m[0m'Sort ['diffence between 2010 and 2020 DESC NULLS LAST], true[0m
-[0m[[0m[31merror[0m] [0m[0m+- 'Project ['s1.state, 's1.totalPop AS 2010#128, 's2.totalPop AS 2020#129, ('s2.totalPop - 's1.totalPop) AS diffence between 2010 and 2020#130][0m
-[0m[[0m[31merror[0m] [0m[0m   +- 'Join Inner, ('s1.stateID = 's2.stateID)[0m
-[0m[[0m[31merror[0m] [0m[0m      :- SubqueryAlias s1[0m
-[0m[[0m[31merror[0m] [0m[0m      :  +- SubqueryAlias states10[0m
-[0m[[0m[31merror[0m] [0m[0m      :     +- Project [_c1#20 AS State#80, _c5#21 AS TotalPop#81, _c6#22 AS Hispanic_Latino#82, _c7#23 AS White#83, _c8#24 AS African#84, _c9#25 AS Indian#85, _c10#26 AS Asian#86, _c11#27 AS NativeHawaiian_PacificIslander#87, _c12#28 AS OtherRace#88, Region#29 AS Region#89][0m
-[0m[[0m[31merror[0m] [0m[0m      :        +- Relation[_c1#20,_c5#21,_c6#22,_c7#23,_c8#24,_c9#25,_c10#26,_c11#27,_c12#28,Region#29] parquet[0m
-[0m[[0m[31merror[0m] [0m[0m      +- SubqueryAlias s2[0m
-[0m[[0m[31merror[0m] [0m[0m         +- SubqueryAlias states20[0m
-[0m[[0m[31merror[0m] [0m[0m            +- Project [_c1#40 AS State#100, _c5#41 AS TotalPop#101, _c6#42 AS Hispanic_Latino#102, _c7#43 AS White#103, _c8#44 AS African#104, _c9#45 AS Indian#105, _c10#46 AS Asian#106, _c11#47 AS NativeHawaiian_PacificIslander#107, _c12#48 AS OtherRace#108, Region#49 AS Region#109][0m
-[0m[[0m[31merror[0m] [0m[0m               +- Relation[_c1#40,_c5#41,_c6#42,_c7#43,_c8#44,_c9#45,_c10#46,_c11#47,_c12#48,Region#49] parquet[0m
-[0m[[0m[31merror[0m] [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.analysis.package$AnalysisErrorAt.failAnalysis(package.scala:42)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$checkAnalysis$1$$anonfun$apply$2.applyOrElse(CheckAnalysis.scala:92)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$checkAnalysis$1$$anonfun$apply$2.applyOrElse(CheckAnalysis.scala:89)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$transformUp$1.apply(TreeNode.scala:289)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$transformUp$1.apply(TreeNode.scala:289)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:70)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode.transformUp(TreeNode.scala:288)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$3.apply(TreeNode.scala:286)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$3.apply(TreeNode.scala:286)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$4.apply(TreeNode.scala:306)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode.mapProductIterator(TreeNode.scala:187)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode.mapChildren(TreeNode.scala:304)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode.transformUp(TreeNode.scala:286)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.plans.QueryPlan$$anonfun$transformExpressionsUp$1.apply(QueryPlan.scala:95)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.plans.QueryPlan$$anonfun$transformExpressionsUp$1.apply(QueryPlan.scala:95)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.plans.QueryPlan$$anonfun$1.apply(QueryPlan.scala:107)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.plans.QueryPlan$$anonfun$1.apply(QueryPlan.scala:107)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:70)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.plans.QueryPlan.transformExpression$1(QueryPlan.scala:106)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.plans.QueryPlan.org$apache$spark$sql$catalyst$plans$QueryPlan$$recursiveTransform$1(QueryPlan.scala:118)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.plans.QueryPlan.org$apache$spark$sql$catalyst$plans$QueryPlan$$recursiveTransform$1(QueryPlan.scala:119)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.plans.QueryPlan$$anonfun$2.apply(QueryPlan.scala:127)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode.mapProductIterator(TreeNode.scala:187)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.plans.QueryPlan.mapExpressions(QueryPlan.scala:127)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.plans.QueryPlan.transformExpressionsUp(QueryPlan.scala:95)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$checkAnalysis$1.apply(CheckAnalysis.scala:89)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$checkAnalysis$1.apply(CheckAnalysis.scala:84)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:127)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$foreachUp$1.apply(TreeNode.scala:126)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$foreachUp$1.apply(TreeNode.scala:126)[0m
+[0m[[0m[31merror[0m] [0m[0morg.apache.spark.sql.AnalysisException: Path does not exist: file:/C:/Users/Khoa/Desktop/CensusData/input/output00.csv;[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.DataSource$.org$apache$spark$sql$execution$datasources$DataSource$$checkAndGlobPathIfNecessary(DataSource.scala:719)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.DataSource$$anonfun$15.apply(DataSource.scala:390)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.DataSource$$anonfun$15.apply(DataSource.scala:390)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.TraversableLike$$anonfun$flatMap$1.apply(TraversableLike.scala:241)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.TraversableLike$$anonfun$flatMap$1.apply(TraversableLike.scala:241)[0m
 [0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:126)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$foreachUp$1.apply(TreeNode.scala:126)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$foreachUp$1.apply(TreeNode.scala:126)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:126)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$class.checkAnalysis(CheckAnalysis.scala:84)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.analysis.Analyzer.checkAnalysis(Analyzer.scala:92)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.analysis.Analyzer.executeAndCheck(Analyzer.scala:105)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:55)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.QueryExecution.assertAnalyzed(QueryExecution.scala:47)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:74)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:642)[0m
-[0m[[0m[31merror[0m] [0m[0m	at SQLquery$.main(SQLquery.scala:58)[0m
-[0m[[0m[31merror[0m] [0m[0m	at SQLquery.main(SQLquery.scala)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.TraversableLike$class.flatMap(TraversableLike.scala:241)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.List.flatMap(List.scala:355)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:389)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:239)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:227)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameReader.csv(DataFrameReader.scala:596)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameReader.csv(DataFrameReader.scala:473)[0m
+[0m[[0m[31merror[0m] [0m[0m	at query5$.main(query5.scala:17)[0m
+[0m[[0m[31merror[0m] [0m[0m	at query5.main(query5.scala)[0m
 [0m[[0m[31merror[0m] [0m[0m	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
 [0m[[0m[31merror[0m] [0m[0m	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)[0m
 [0m[[0m[31merror[0m] [0m[0m	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)[0m
@@ -74,15 +31,4 @@
 [0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)[0m
 [0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)[0m
 [0m[[0m[31merror[0m] [0m[0m	at java.lang.Thread.run(Unknown Source)[0m
-[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrun[0m) org.apache.spark.sql.AnalysisException: cannot resolve '`s1.stateID`' given input columns: [s1.State, s1.Region, s2.OtherRace, s1.White, s1.NativeHawaiian_PacificIslander, s2.Hispanic_Latino, s1.Indian, s1.OtherRace, s1.TotalPop, s2.State, s2.NativeHawaiian_PacificIslander, s2.Asian, s1.African, s2.Region, s2.White, s1.Hispanic_Latino, s2.African, s2.TotalPop, s2.Indian, s1.Asian]; line 1 pos 166;[0m
-[0m[[0m[31merror[0m] [0m[0m'Sort ['diffence between 2010 and 2020 DESC NULLS LAST], true[0m
-[0m[[0m[31merror[0m] [0m[0m+- 'Project ['s1.state, 's1.totalPop AS 2010#128, 's2.totalPop AS 2020#129, ('s2.totalPop - 's1.totalPop) AS diffence between 2010 and 2020#130][0m
-[0m[[0m[31merror[0m] [0m[0m   +- 'Join Inner, ('s1.stateID = 's2.stateID)[0m
-[0m[[0m[31merror[0m] [0m[0m      :- SubqueryAlias s1[0m
-[0m[[0m[31merror[0m] [0m[0m      :  +- SubqueryAlias states10[0m
-[0m[[0m[31merror[0m] [0m[0m      :     +- Project [_c1#20 AS State#80, _c5#21 AS TotalPop#81, _c6#22 AS Hispanic_Latino#82, _c7#23 AS White#83, _c8#24 AS African#84, _c9#25 AS Indian#85, _c10#26 AS Asian#86, _c11#27 AS NativeHawaiian_PacificIslander#87, _c12#28 AS OtherRace#88, Region#29 AS Region#89][0m
-[0m[[0m[31merror[0m] [0m[0m      :        +- Relation[_c1#20,_c5#21,_c6#22,_c7#23,_c8#24,_c9#25,_c10#26,_c11#27,_c12#28,Region#29] parquet[0m
-[0m[[0m[31merror[0m] [0m[0m      +- SubqueryAlias s2[0m
-[0m[[0m[31merror[0m] [0m[0m         +- SubqueryAlias states20[0m
-[0m[[0m[31merror[0m] [0m[0m            +- Project [_c1#40 AS State#100, _c5#41 AS TotalPop#101, _c6#42 AS Hispanic_Latino#102, _c7#43 AS White#103, _c8#44 AS African#104, _c9#45 AS Indian#105, _c10#46 AS Asian#106, _c11#47 AS NativeHawaiian_PacificIslander#107, _c12#48 AS OtherRace#108, Region#49 AS Region#109][0m
-[0m[[0m[31merror[0m] [0m[0m               +- Relation[_c1#40,_c5#41,_c6#42,_c7#43,_c8#44,_c9#45,_c10#46,_c11#47,_c12#48,Region#49] parquet[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrun[0m) org.apache.spark.sql.AnalysisException: Path does not exist: file:/C:/Users/Khoa/Desktop/CensusData/input/output00.csv;[0m
