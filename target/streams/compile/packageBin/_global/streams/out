@@ -1,1 +1,27 @@
-[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: C:\Users\Khoa\Desktop\CensusData\target\scala-2.11\project2_2.11-0.1.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mPackaging C:\Users\Khoa\Desktop\CensusData\target\scala-2.11\project2_2.11-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	query5$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Khoa\Desktop\CensusData\target\scala-2.11\classes\query5$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	query5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Khoa\Desktop\CensusData\target\scala-2.11\classes\query5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	question3$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Khoa\Desktop\CensusData\target\scala-2.11\classes\question3$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	question3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Khoa\Desktop\CensusData\target\scala-2.11\classes\question3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	question3_2000$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Khoa\Desktop\CensusData\target\scala-2.11\classes\question3_2000$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	question3_2000.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Khoa\Desktop\CensusData\target\scala-2.11\classes\question3_2000.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	question3_2010$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Khoa\Desktop\CensusData\target\scala-2.11\classes\question3_2010$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	question3_2010.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Khoa\Desktop\CensusData\target\scala-2.11\classes\question3_2010.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	question3_2020$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Khoa\Desktop\CensusData\target\scala-2.11\classes\question3_2020$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	question3_2020.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Khoa\Desktop\CensusData\target\scala-2.11\classes\question3_2020.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SQLquery$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Khoa\Desktop\CensusData\target\scala-2.11\classes\SQLquery$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SQLquery.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Khoa\Desktop\CensusData\target\scala-2.11\classes\SQLquery.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
