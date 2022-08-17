@@ -19,12 +19,12 @@ This is a team project to showcase our knowledge and understanding acquired duri
 - Lastly deploy the zip parquet files into the S3 bucket through spark scala application
 
 # Transformation
--Ensure all data is stored in parquet format, increasing processing speed
--Ensure data is clear and legibile, formatting where needed (ex: Changing Regions from numbers to Strings indicating exact value)
--Use elements such as caching, broadcast variables, multi-threading, and coalesce to condense data retrieved from the website.
--Work with the query team to create dataframes that fit the needs of the questions we are asking of the data.
--Results were a reduction in file size from 80 mb to 5 kb after all processes were complete.
--All changes discussed were distributed using s3. Ensuring successful push information was a regular responsiblity of this team.
+- Ensure all data is stored in parquet format, increasing processing speed
+- Ensure data is clear and legibile, formatting where needed (ex: Changing Regions from numbers to Strings indicating exact value)
+- Use elements such as caching, broadcast variables, multi-threading, and coalesce to condense data retrieved from the website.
+- Work with the query team to create dataframes that fit the needs of the questions we are asking of the data.
+- Results were a reduction in file size from 80 mb to 5 kb after all processes were complete.
+- All changes discussed were distributed using s3. Ensuring successful push information was a regular responsiblity of this team.
 
 # Query
 The goal of the query team is to answer these questions:
