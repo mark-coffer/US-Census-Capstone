@@ -18,7 +18,16 @@ object SQLquery{
 
         import spark.implicits._    //SQLImplicits
 
+        // val accessKey = "############"
+        // val secretAccessKey = "#########"
+        // val bucket = "################"
+
+        // spark.sparkContext.hadoopConfiguration.set("fs.s3a.access.key", accessKey)
+        // spark.sparkContext.hadoopConfiguration.set("fs.s3a.secret.key", secretAccessKey)
+        // spark.sparkContext.hadoopConfiguration.set("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
+
         // Create DF from input parquet files
+        //val parquetDF = spark.read.parquet(s"s3a://${bucket}/optimized/2020/total_pop_2020")
         val data00 = spark.read.parquet("total_pop_2000.parquet")
         val data10 = spark.read.parquet("total_pop_2010.parquet")
         val data = spark.read.parquet("total_pop_2020.parquet")
@@ -80,8 +89,8 @@ object SQLquery{
                             "order by `diffence between 2010 and 2020` asc").repartition(1)                            
                         
         q8a.show()
-         q8b.show()
-         q8a.write.option("header", "true").mode("overwrite").csv("input/q8a/")
-          q8b.write.option("header", "true").mode("overwrite").csv("input/q8b/")
+        q8b.show()
+        q8a.write.option("header", "true").mode("overwrite").csv("input/q8a/")
+        q8b.write.option("header", "true").mode("overwrite").csv("input/q8b/")
     }
 }
