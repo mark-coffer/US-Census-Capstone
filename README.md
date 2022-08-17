@@ -24,6 +24,7 @@ This is a team project to showcase our knowledge and understanding acquired duri
 -Use elements such as caching, broadcast variables, multi-threading, and coalesce to condense data retrieved from the website.
 -Work with the query team to create dataframes that fit the needs of the questions we are asking of the data.
 -Results were a reduction in file size from 80 mb to 5 kb after all processes were complete.
+-All changes discussed were distributed using s3. Ensuring successful push information was a regular responsiblity of this team.
 
 # Query
 The goal of the query team is to answer these questions:
