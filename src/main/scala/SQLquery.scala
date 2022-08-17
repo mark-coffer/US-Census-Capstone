@@ -27,12 +27,12 @@ object SQLquery{
         spark.sparkContext.hadoopConfiguration.set("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
 
         //Create DF from input parquet files
-        // val data00 = spark.read.parquet(s"s3a://${bucket}/optimized/2000/total_pop_2000")
-        // val data10 = spark.read.parquet(s"s3a://${bucket}/optimized/2010/total_pop_2010")
-        // val data20 = spark.read.parquet(s"s3a://${bucket}/optimized/2020/total_pop_2020")
-        val data00 = spark.read.csv("output00.csv")
-        val data10 = spark.read.csv("output10.csv")
-        val data20 = spark.read.csv("output20.csv")
+        val data00 = spark.read.parquet(s"s3a://${bucket}/optimized/2000/total_pop_2000")
+        val data10 = spark.read.parquet(s"s3a://${bucket}/optimized/2010/total_pop_2010")
+        val data20 = spark.read.parquet(s"s3a://${bucket}/optimized/2020/total_pop_2020")
+        // val data00 = spark.read.csv("output00.csv")
+        // val data10 = spark.read.csv("output10.csv")
+        // val data20 = spark.read.csv("output20.csv")
 
         
         //val column = Seq("StateID", "RegionID", "State","TotalPop", "White", "African", "Indian", "Asian", "NativeHawaiian_PacificIslander", "OtherRace", "Hispanic_Latino")
@@ -41,7 +41,7 @@ object SQLquery{
         val df1 = data10.toDF(column:_*)
         val df2 = data20.toDF(column:_*)
 
-        //Create views for the csv files to query
+        //Create views for the files to query
         df0.createOrReplaceTempView("states00")
         df1.createOrReplaceTempView("states10")
         df2.createOrReplaceTempView("states20")
