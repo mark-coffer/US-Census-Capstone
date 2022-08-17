@@ -1,7 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Khoa\Desktop\CensusData\src\main\scala\SQLquery.scala:63:10: not found: value q8b[0m
-[0m[[0m[31merror[0m] [0m[0m         q8b.show()[0m
-[0m[[0m[31merror[0m] [0m[0m         ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Khoa\Desktop\CensusData\src\main\scala\SQLquery.scala:65:11: not found: value q8b[0m
-[0m[[0m[31merror[0m] [0m[0m          q8b.write.option("header", "true").mode("overwrite").csv("input/q8b/")[0m
-[0m[[0m[31merror[0m] [0m[0m          ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Khoa\Desktop\CensusData\src\main\scala\SQLquery.scala:79:13: a pure expression does nothing in statement position; you may be omitting necessary parentheses[0m
+[0m[[0m[33mwarn[0m] [0m[0m        2000-2010[0m
+[0m[[0m[33mwarn[0m] [0m[0m            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
