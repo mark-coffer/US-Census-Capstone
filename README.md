@@ -2,7 +2,7 @@
 Analyze trends and provide visualizations using US Census Data pulled from 2000 - 2020.
 This is a team project to showcase our knowledge and understanding acquired during training.
 
-# Extraction from Census Steps:
+# Extraction
 -Download zip file from Census.gov for your chosen year and dataset
 - After open your preferred IDE and create your build.sbt
 - Inside your build.sbt ensure that you have jsoup inside your libarary dependencies
